@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            color: #ff1493;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff1493;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .button-container button:hover {
+            background-color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my valentine?</h1>
+    <div class="button-container">
+        <button onclick="respond('Yes')">Yes</button>
+        <button onclick="respond('No')">No</button>
+    </div>
+    <div id="response"></div>
+
+    <script>
+        function respond(answer) {
+            var responseElement = document.getElementById("response");
+            if (answer === 'Yes') {
+                responseElement.textContent = "YAY!";
+            } else {
+                responseElement.textContent = "You meant to press Yes. 😊";
+            }
+        }
+    </script>
+</body>
+</html>
